@@ -1,10 +1,14 @@
 public class Circle {
-    private int x;
+    private int x = 3;
     private int y;
 
     Circle(int x, int y) {
         this.x = x;
         this.y = y;
+    }
+
+    Circle() {
+
     }
 
     public void setX(int x) {
