@@ -1,39 +1,40 @@
 public class Circle {
-    private int x = 3;
-    private int y;
-
-    Circle(int x, int y) {
-        this.x = x;
-        this.y = y;
-    }
+    private double radius;
+    static int numObjects;
 
     Circle() {
-
+        this.radius = 1;
+        numObjects++;
     }
 
-    public void setX(int x) {
-        this.x = x;
+    Circle(double radius) {
+        this.radius = radius;
+        numObjects++;
     }
 
-    public void setY(int y) {
-        this.y = y;
+    public static int getNumObjects(){
+        return numObjects;
     }
 
-    public int getX() {
-        return x;
+    public void setRadius(double radius) {
+        this.radius = radius;
     }
 
-    public int getY() {
-        return y;
+    public double getRadius() {
+        return radius;
     }
 
-    public void moveCircle(Circle circle, int deltaX, int deltaY) {
-        circle.setX(circle.getX() + deltaX);
-        circle.setY(circle.getY() + deltaY);
-
-        System.out.println("X : " + circle.getX());
-        System.out.println("Y : " + circle.getY());
-
-        circle = new Circle(0, 0);
+    public double getArea() {
+        return Math.PI * Math.pow(radius, 2);
     }
+
+    public double getPerimeter() {
+        return 2 * Math.PI * radius;
+    }
+
+    @Override
+    public String toString(){
+        return "Radio: " + radius + " Area: " + getArea() + " Perimeter: " + getPerimeter();
+    }
+
 }

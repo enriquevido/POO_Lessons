@@ -1,4 +1,6 @@
 import java.awt.*;
+import java.sql.SQLOutput;
+import java.util.Scanner;
 
 public class DeclarationMethod {
 
@@ -35,11 +37,31 @@ public class DeclarationMethod {
 //        rectTwo.setLocation(originOne);
 //
 //        System.out.println("rectTwo X Position: " + rectTwo.x);
+
 //        System.out.println("rectTwo Y Position: " + rectTwo.y);
 //
 //        rectTwo.setLocation(40, 72);
 //        System.out.println("rectTwo X Position: " + rectTwo.x);
 //        System.out.println("rectTwo Y Position: " + rectTwo.y);
 
+        Circle c1 = new Circle();
+        Circle c2 = new Circle(3.5);
+
+        c1.setRadius(5);
+
+        System.out.println("==============CIRCULO 1===============");
+        System.out.println("Radio: " + c1.getRadius());
+        System.out.println("Area: " + c1.getArea());
+        System.out.println("Perimeter: " + c1.getPerimeter());
+
+        System.out.println("==============CIRCULO 2===============");
+        System.out.println("Radio: " + c2.getRadius());
+        System.out.println("Area: " + c2.getArea());
+        System.out.println("Perimeter: " + c2.getPerimeter());
+        System.out.println();
+        System.out.println("Numéro de objetos: " + Circle.getNumObjects());
+
+        System.out.println(c1.toString());
+        System.out.println(c2.toString());
     }
 }
